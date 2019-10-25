@@ -31,12 +31,13 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.ResultsListBox = new System.Windows.Forms.ListBox();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
+            this.FindButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.RecordsFoundlabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
@@ -68,9 +69,10 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.listBox1);
-            this.tabPage2.Controls.Add(this.textBox1);
-            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.RecordsFoundlabel);
+            this.tabPage2.Controls.Add(this.ResultsListBox);
+            this.tabPage2.Controls.Add(this.SearchTextBox);
+            this.tabPage2.Controls.Add(this.FindButton);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Location = new System.Drawing.Point(136, 4);
             this.tabPage2.Name = "tabPage2";
@@ -79,6 +81,50 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Films";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // ResultsListBox
+            // 
+            this.ResultsListBox.FormattingEnabled = true;
+            this.ResultsListBox.Location = new System.Drawing.Point(11, 62);
+            this.ResultsListBox.Name = "ResultsListBox";
+            this.ResultsListBox.Size = new System.Drawing.Size(425, 212);
+            this.ResultsListBox.TabIndex = 3;
+            // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.Location = new System.Drawing.Point(58, 10);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(297, 20);
+            this.SearchTextBox.TabIndex = 2;
+            // 
+            // FindButton
+            // 
+            this.FindButton.Location = new System.Drawing.Point(361, 8);
+            this.FindButton.Name = "FindButton";
+            this.FindButton.Size = new System.Drawing.Size(75, 23);
+            this.FindButton.TabIndex = 1;
+            this.FindButton.Text = "Find";
+            this.FindButton.UseVisualStyleBackColor = true;
+            this.FindButton.Click += new System.EventHandler(this.FindButton_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Search:";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(136, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(444, 281);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Staff";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -93,48 +139,14 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // tabPage3
+            // RecordsFoundlabel
             // 
-            this.tabPage3.Location = new System.Drawing.Point(136, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(456, 281);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Staff";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Search:";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(361, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Find";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(58, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(297, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(11, 36);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(425, 238);
-            this.listBox1.TabIndex = 3;
+            this.RecordsFoundlabel.AutoSize = true;
+            this.RecordsFoundlabel.Location = new System.Drawing.Point(13, 42);
+            this.RecordsFoundlabel.Name = "RecordsFoundlabel";
+            this.RecordsFoundlabel.Size = new System.Drawing.Size(81, 13);
+            this.RecordsFoundlabel.TabIndex = 4;
+            this.RecordsFoundlabel.Text = "0 records found";
             // 
             // MainForm
             // 
@@ -161,10 +173,11 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox ResultsListBox;
+        private System.Windows.Forms.TextBox SearchTextBox;
+        private System.Windows.Forms.Button FindButton;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label RecordsFoundlabel;
     }
 }
 
