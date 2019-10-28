@@ -5,6 +5,11 @@ VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SakilaWinformsUI", "SakilaWinformsUI\SakilaWinformsUI.csproj", "{BFB93F9E-DF64-4D71-A94C-78B64711607C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B14EA2FB-A130-4111-BABC-1829742DF464}"
+	ProjectSection(SolutionItems) = preProject
+		MV5BMTY2Njk3MTAzM15BMl5BanBnXkFtZTgwMTY5Mzk4NjE@._V1_SY1000_CR0,0,669,1000_AL_.jpg = MV5BMTY2Njk3MTAzM15BMl5BanBnXkFtZTgwMTY5Mzk4NjE@._V1_SY1000_CR0,0,669,1000_AL_.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
